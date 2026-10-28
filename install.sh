@@ -12,10 +12,10 @@ echo "[1/4] Instalando dependencias del sistema (wget, unzip)..."
 sudo apt-get update -qq
 sudo apt-get install -y -qq wget unzip libusb-1.0-0
 
-# 2. Descargar y ubicar el binario oficial
+# 2. Descargar y ubicar el binario desde tu propio release
 echo "[2/4] Descargando la aplicación RGB..."
 TEMP_DIR=$(mktemp -d)
-wget -q --show-progress -O "$TEMP_DIR/legion-kb-rgb.zip" "https://github.com/4JX/L5P-Keyboard-RGB/releases/latest/download/legion-kb-rgb-linux.zip"
+wget -q --show-progress -O "$TEMP_DIR/legion-kb-rgb.zip" "https://github.com/EduardoTapia23/lenovo-loq-rgb-installer/releases/download/v1.0.0/legion-kb-rgb-linux.zip"
 unzip -qo "$TEMP_DIR/legion-kb-rgb.zip" -d "$TEMP_DIR"
 
 echo "Moviendo el ejecutable a /usr/local/bin..."
